@@ -17,15 +17,18 @@ public class Controller {
                 final int m=j;
                 this.view.buttonListener(new ActionListener(){
                     public void actionPerformed(ActionEvent e) {
-                     if(mod.clicked(k,m)==false){
+                     mod.clicked(k,m);
+                     //schould k.m be unclickable?
+                     //need unclickable list
+                     if(mod.hittedBomb()==true){
                          //endgame send bombs send bomb list 
                          //pop up game over
                      }else{
                          //start DrawBombBorders
-                         //end goal send perikiklomeni area to view
+                         //end goal send perikiklomeni area to view 
                      }
-        }
-    },i,j);
+                    }
+                },i,j);
             }
         }
         
