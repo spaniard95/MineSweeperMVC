@@ -7,7 +7,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 
@@ -30,12 +29,15 @@ public class Program extends JFrame {
                 grid[i][j].setOpaque(true);
                 panel.add(grid[i][j]);
                // grid[i][j].addActionListener(new ActionListener (){
-     //  public void actionPerformed(ActionEvent e){.......}});
+               //  public void actionPerformed(ActionEvent e){.......}});
             }
         }
    
     }
     public void buttonListener(ActionListener listen,int i,int j){
         grid[i][j].addActionListener(listen);
+    }
+    public void setButtonText(int x,int y,int i){
+        grid[x][y].setText(""+i);
     }
 }
