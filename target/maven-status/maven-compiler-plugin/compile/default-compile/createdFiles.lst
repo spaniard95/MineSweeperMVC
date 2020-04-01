@@ -1,5 +1,7 @@
 com\mycompany\minesweeper\MineSweeper.class
 com\mycompany\minesweeper\Program.class
-com\mycompany\minesweeper\Controller.class
 com\mycompany\minesweeper\Model.class
+com\mycompany\minesweeper\Cordinates.class
+com\mycompany\minesweeper\Game.class
+com\mycompany\minesweeper\Controller.class
 com\mycompany\minesweeper\Controller$1.class

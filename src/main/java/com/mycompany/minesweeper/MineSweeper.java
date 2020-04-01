@@ -6,6 +6,9 @@ public class MineSweeper {
 
     public static void main(String[]args){
      Model mod=new Model();
-     mod.printMatrix();
+     Program view=new Program();
+     new Controller(view,mod);
+     view.setVisible(true);
+     
    }    
 }

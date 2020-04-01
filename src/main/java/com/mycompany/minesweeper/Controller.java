@@ -13,21 +13,26 @@ public class Controller {
         this.view=view;
         for (int i=0;i<10;i++){
             for(int j=0;j<10;j++){
-                final int k=i;
-                final int m=j;
+                Cordinates click=new Cordinates(i,j);
                 this.view.buttonListener(new ActionListener(){
                     public void actionPerformed(ActionEvent e) {
-                     mod.clicked(k,m);
-                     //schould k.m be unclickable?
-                     //need unclickable list
-                     if(mod.hittedBomb()==true){
+                     mod.clicked(click);
+                     System.out.println(""+click.getX()+""+click.getY()+"clicked");
+                     // if (mod.clickable()){                   //if the user can press tha button play game else just dont do anything
+                         if(mod.hittedBomb()==true){
+                             System.out.println("bomb");
                          //endgame send bombs send bomb list 
                          //pop up game over
-                     }else{
+                         }else{
+                           System.out.println("no bomb");
                          //start DrawBombBorders
                          //end goal send perikiklomeni area to view 
+                         //button.setEnabled( false );
+                         mod.buildPerimeter();
+                         }
                      }
-                    }
+                     //else setUnclickable?
+                   // }
                 },i,j);
             }
         }

@@ -1,14 +1,37 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.mycompany.minesweeper;
 
-/**
- *
- * @author p
- */
 class Cordinates {
+    
+    private int x,y,bombs;
+    
+    
+    public Cordinates(int x ,int y){
+        this.x=x;
+        this.y=y;
+    }
+    public Cordinates(int x,int y,int bombs){
+        this.x=x;
+        this.y=y;
+        this.bombs=bombs;
+    }
+
+    
+    public int getBombs() {
+        return bombs;
+    }
+
+    public void setBombs(int bombs) {
+        this.bombs = bombs;
+    }
+    
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
     
 }
