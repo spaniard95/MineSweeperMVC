@@ -17,7 +17,7 @@ public class Model {
     private List bombs=new ArrayList();  //package if the user hits a bomb
     private List<Cordinates> toSearch=new ArrayList<Cordinates>();
     private HashSet<Cordinates> alreadySearched=new HashSet<Cordinates>();       //contains block cordinates that have to be searched
-    private HashSet<Cordinates> blocks=new HashSet<Cordinates>();                //goal package that will be sent to controller
+    private List<Cordinates> blocks=new ArrayList<Cordinates>();                //goal package that will be sent to controller
     
     
     public Model(){
@@ -64,9 +64,9 @@ public class Model {
            }
         }
         System.out.println(sum);//test
-        if(sum==0) expandToSearch(x,y);                                                 //EDO THA PROSTHWTI TIN NEA PERIOXI(OXI X) OXI OTI IDI EPSAKSE
-        else blocks.add(new Cordinates(x,y,sum)); 
-        
+        if(sum==0) expandToSearch(x,y);                                                
+         blocks.add(new Cordinates(x,y,sum));
+           
     }
     private void expandToSearch(int x,int y){
         for(int i=x-1;i<=x+1;i++){
@@ -99,6 +99,11 @@ public class Model {
         }
       array[11][11]="X";
     }
+
+    public List<Cordinates> getBlocks() {
+        return blocks;
+    }
+    
      //not necessary
       public void printMatrix(){
            for (int i=0; i<array.length ; i++){ 
